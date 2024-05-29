@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+a {
+  color: #7c9ab7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.center {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.regForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 16px;
+  width: 400px;
+}
+
+.regForm__input {
+  margin: 10px 0;
+  padding: 10px;
+  border: unset;
+  border-bottom: 2px solid #e3e3e3;
+  outline: none;
+}
+
+.regForm__button {
+  padding: 10px;
+  background: #e3e3e3;
+  border: unset;
+  cursor: pointer;
+}
+
+.radio {
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  margin-left: 10px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.box_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+input {
+  margin: 10px 0;
+  padding: 10px;
+  border: unset;
+  border-bottom: 2px solid #e3e3e3;
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  background: #e3e3e3;
+  border: unset;
+  cursor: pointer;
+}
+
+a {
+  color: #7c9ab7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.message {
+  border: 2px solid #ffa908;
+  border-radius: 3px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.logout {
+  color: #ffa908;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
