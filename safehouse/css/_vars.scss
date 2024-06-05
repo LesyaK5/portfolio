@@ -1,0 +1,64 @@
+$widthSite: 1200px;
+$colorBlack: #0F0F0F;
+$colorDarkGrey: #1C1D1E;
+$colorGrey: #3D3D3D;
+$colorOrange: #FF7A00;
+$colorWhite: #FFFFFF;
+
+%headingOne {
+    // font-family: 'Montserrat';
+    // font-weight: bold;
+    // font-size: 60px;
+    //styleName: Heading/One;
+    font-family: Roboto;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70.31px;
+    text-align: left;
+    // color: #FFFFFF;
+}
+
+%headingTwo {
+    //styleName: Heading/Two;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36.57px;
+    text-align: left;
+}
+
+%headingThree {
+    //styleName: Heading/Three;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26.82px;
+    text-align: left;
+}
+
+%text {
+    //styleName: Text;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.94px;
+    text-align: left;
+}
+
+%menuText {
+    //styleName: Menu;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.5px;
+    text-align: left;
+}
+
+%paragraph {
+    //styleName: Paragraph;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.07px;
+    text-align: left;
+}
