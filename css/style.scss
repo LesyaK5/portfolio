@@ -12,7 +12,6 @@ body {
 a {
     text-decoration: none;
     color: #6A6A6A;
-    // display: block;
 }
 
 .center {
@@ -66,7 +65,6 @@ a {
         font-size: 1.1rem;
         padding-left: 10px;
         padding-top: 5px;
-        // margin-bottom: .5rem;
         font-weight: 500;
         line-height: 1.2;
         color: inherit;
@@ -75,8 +73,6 @@ a {
     &__icons {
         display: flex;
         flex-wrap: wrap;
-        // gap: 10px;
-        // border-bottom: 1px solid #6A6A6A;
 
         .fa-brands {
             padding: 10px;
@@ -107,15 +103,13 @@ a {
 
     &__heading {
         font-size: 1.2rem;
-        border-bottom: 1px solid #CCC;
-        padding-bottom: 10px;
         margin-bottom: 10px;
     }
 }
 
 .project {
-    border-bottom: 1px solid #CCC;
-    padding-bottom: 10px;
+    border-top: 1px solid #CCC;
+    padding-top: 10px;
     margin-bottom: 10px;
 
     &__title {
