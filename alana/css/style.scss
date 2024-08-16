@@ -1,0 +1,463 @@
+@-webkit-keyframes vibrate-1 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+@keyframes vibrate-1 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+
+@import "vars";
+
+%font {
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fontFamily;
+    min-width: 375px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+summary {
+    display: block;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.center {
+    padding-left: calc(50% - $widthSite / 2);
+    padding-right: calc(50% - $widthSite / 2);
+}
+
+.header {
+    min-height: 75px;
+    background-color: $colorBlock;
+    @include flex($horizontalPozition, $verticalPosition);
+    position: relative;
+
+    &-left {
+        @include flex($horizontalPozition, $verticalPosition);
+        gap: 41px;
+    }
+
+    &-right {
+        @include flex($horizontalPozition, $verticalPosition);
+        gap: 33px;
+        padding-right: 16px;
+    }
+
+    &-img path {
+        transition: $transition;
+    }
+
+    &-img:hover path {
+        fill: $colorSite;
+    }
+
+    &__checkbox {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+    &__checkbox:checked~.mobile-menu {
+        /* знак ~ означает, что ищется элемент с классом mobile-menu на том же уровне вложенности, что и checkbox, и к нему применяется свойство */
+        opacity: 1;
+        transform: translate(-50%, 0);
+        pointer-events: auto; // возвращаем кликабельность для расскрытого меню
+    }
+}
+
+.search-form {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+
+    & input {
+        border: $borderLight;
+        border-radius: 30px 0 0 30px;
+        padding: 10px 18px;
+    }
+
+    &__button {
+        background-color: $colorSite;
+        color: $colorLight;
+        padding: 8px 12px;
+        border: $borderHover;
+        border-radius: 0 30px 30px 0;
+        transition: $transition;
+
+        &:hover {
+            color: $colorSite;
+            background-color: $colorLight;
+        }
+    }
+}
+
+.incart {
+    position: relative;
+}
+
+.totalQuantity {
+    padding: 5px 6px;
+    border-radius: 50px;
+    background-color: $colorSite;
+    color: $colorLight;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    &_position {
+        position: absolute;
+        top: -30%;
+        right: -40%;
+    }
+}
+
+.menu-exit-block {
+    @include flex($horizontalPozition, $verticalPosition);
+}
+
+.mobile-menu {
+    pointer-events: none; // убираем перекрытие нижних блоков, чтобы сортировка работала
+    position: absolute;
+    top: 75px;
+    right: -116px;
+    z-index: 4;
+    transition: $transition;
+    opacity: 0;
+    transform: translate(-50%, 20px);
+    width: 232px;
+    background: $colorLight;
+    -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    padding: 32px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    &__link-site {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        background-color: #e8e8e8;
+        padding: 8px;
+        border-radius: 10px;
+        margin-bottom: 24px;
+        display: none;
+    }
+
+    &_position {
+        position: absolute;
+        top: 5%;
+        right: 20%;
+    }
+
+    &__heading {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+    }
+
+    &__link {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6F6E6E;
+
+        &:hover {
+            color: $colorSite;
+        }
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $colorSite;
+    }
+
+    &__list {
+        @include flexColumn(11px);
+        list-style-type: none;
+        padding-left: 22px;
+        margin-top: 12px;
+    }
+
+    &__box {
+        @include flexColumn(20px);
+        margin-top: 24px;
+    }
+}
+
+
+/* main page */
+
+@import "index";
+
+.subscribe {
+    background-image: url(../img/footer/subscribe.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 448px;
+    @include flex($horizontalPozition, $verticalPosition);
+
+    &-left {
+        @include flex(center, $verticalPosition);
+        flex-direction: column;
+        gap: $gapColumn;
+        width: 31%;
+    }
+
+    &__dsc {
+        color: $colorBlock;
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+    }
+
+    &-right {
+        @include flex(center, $verticalPosition);
+        flex-direction: column;
+        width: 49%;
+    }
+
+    &__title {
+        color: $colorBlock;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 167.2%;
+    }
+
+    &__text {
+        color: $colorBlock;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 167.2%;
+        margin-bottom: 32px;
+    }
+
+    &__reg {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 374px;
+
+        &-email {
+            background-color: #E1E1E1;
+            width: 71%;
+            padding: 18px 0 18px 22px;
+            border-radius: 30px 0 0 30px;
+            border: 0px;
+
+            color: $colorBlock;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            opacity: 0.671;
+        }
+
+        &-button {
+            background-color: $colorSite;
+            width: 28%;
+            padding: 18px 0;
+            border-radius: 0 30px 30px 0;
+
+            color: $colorLight;
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border: 1px solid $colorSite;
+            transition: .4s ease-in-out;
+
+            &:hover {
+                color: $colorSite;
+                background-color: $colorLight;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $colorBlock;
+    @include flex($horizontalPozition, $verticalPosition);
+
+    &-left {
+        width: 31%;
+    }
+
+    &__text {
+        color: #FBFBFB;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 30px 0;
+    }
+
+    &-right {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__icon {
+        height: 32px;
+        width: 32px;
+        background-color: $colorLight;
+        @include flex(center, $verticalPosition);
+        transition: all .3s;
+
+        &:hover {
+            background-color: $colorSite;
+            fill: $colorLight;
+        }
+
+        &:hover path {
+            fill: $colorLight;
+        }
+    }
+
+}
+
+/**************************************************/
+/* product page*/
+@import "product";
+
+
+/*********************************/
+// catalog page
+@import "catalog";
+
+
+/**************************************************/
+/* cart page */
+@import "cart";
+
+
+/**************************************************/
+/* registration page */
+@import "registration";
+
+
+@import "mediaTablet";
+@import "mediaSmart";
+
+// медиа-запросы для устройств, у которых отсутствует мышь или тачпад
+@media (hover: none) and (pointer: none) {
+    .product__card-add {
+        display: flex;
+    }
+}
+
+/* смартфоны, устройства с сенсорными экранами */
+@media (hover: none) and (pointer: coarse) {
+    .product__card-add {
+        display: flex;
+    }
+}
+
+/* устройства с сенсорными экранами, в которых основным механизмом ввода является стилус */
+@media (hover: none) and (pointer: fine) {
+    .product__card-add {
+        display: flex;
+    }
+}
+
+/* Smart TV, игровые консоли */
+@media (hover: hover) and (pointer: coarse) {
+    .product__card-add {
+        display: flex;
+    }
+}

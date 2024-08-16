@@ -1,0 +1,171 @@
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - $widthTablet / 2);
+        padding-right: calc(50% - $widthTablet / 2);
+    }
+
+    .container {
+        width: $widthTablet;
+    }
+
+
+    /* index page */
+
+    .main-heading {
+        font-size: 44px;
+    }
+
+    .main-black,
+    .main-color {
+        font-size: 24px;
+    }
+
+    .offer {
+        margin-top: 20px;
+        margin-bottom: 155px;
+
+        &-top {
+            margin-bottom: 20px;
+        }
+    }
+
+    .catalog {
+
+        &-title {
+            margin-bottom: 4px;
+        }
+
+        &-text {
+            margin-bottom: 73px;
+        }
+    }
+
+    .product {
+        &-list {
+            row-gap: 16px;
+        }
+    }
+
+    .feature {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+        padding-bottom: 64px;
+
+        &-group {
+            padding: 49px 0 0 0;
+            width: $widthHalf;
+        }
+    }
+
+    .subscribe {
+        flex-direction: column;
+        gap: 48px;
+        padding-top: 64px;
+        padding-bottom: 140px;
+        background-position: left;
+        text-align: center;
+
+        &-left,
+        &-right {
+            width: $widthHalf;
+        }
+    }
+
+    .footer {
+        &-left {
+            width: $widthHalf;
+        }
+    }
+
+
+    /* product page */
+
+    .swiper-slide img {
+        max-height: 565px;
+    }
+
+    .productView {
+        margin-top: 0px;
+
+        &__dsc {
+            &-text {
+                width: 75%;
+            }
+        }
+    }
+
+
+
+    /* catalog page */
+
+    .filter-sort {
+        height: 81px;
+
+        &__box {
+            padding-top: 11px;
+        }
+    }
+
+    .filter {
+        width: $widthHalf;
+    }
+
+    .sort {
+        width: calc($widthTablet - $widthHalf - $gap);
+        justify-content: end;
+
+        &_position {
+            padding-top: 11px;
+        }
+    }
+
+
+    /* cart page */
+
+    .cart {
+        @include flexColumn ($gapColumn * 2);
+        align-content: center;
+
+        &-left {
+            width: 99%;
+            justify-content: center;
+        }
+
+        &-buttons {
+            justify-content: space-around;
+        }
+    }
+
+    .cartForm {
+        @include flex ($horizontalPozition, $verticalPosition);
+        flex-wrap: nowrap;
+        width: 98%;
+
+        &-address,
+        &-checkout {
+            width: $widthHalf;
+        }
+    }
+
+
+    /* registration page */
+
+    .reg {
+        padding-top: 40px;
+
+        &-right {
+            width: $widthHalf;
+        }
+
+        &-title,
+        &-text,
+        &-list-item {
+            font-size: 16px;
+        }
+    }
+
+    .regForm {
+        width: $widthHalf;
+    }
+}

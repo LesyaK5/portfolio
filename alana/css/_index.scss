@@ -1,0 +1,171 @@
+/* блок main */
+.main {
+    background-color: #F1E4E6;
+    @include grid-box;
+
+    &-img {
+
+        &.element-animation {
+            opacity: 0;
+            transform: scale(0.85);
+            transition: all 0.5s;
+
+            &.element-show {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+
+    &-right {
+
+        &__border {
+            border-left: $colorSite solid 12px;
+            padding-left: 16px;
+        }
+    }
+
+    &-heading {
+        color: $colorBlock;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+    }
+
+    &-black {
+        color: $colorBlock;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &-color {
+        color: $colorSite;
+    }
+}
+
+.offer {
+    margin-top: 64px;
+    margin-bottom: 96px;
+
+    &-top {
+        gap: $gap;
+        margin-bottom: 30px;
+        @include flex($horizontalPozition, $verticalPosition);
+        flex-wrap: nowrap;
+    }
+
+    &-group {
+        position: relative;
+        @include flex(center, $verticalPosition);
+
+        &:hover .offer-text__white {
+            color: $colorSite;
+        }
+
+        &:hover .offer-text__color {
+            color: $colorLight;
+        }
+    }
+
+    &-animation {
+
+        &.element-animation {
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 1.5s;
+
+            &.element-show {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        &.element-animation:nth-of-type(1).element-show {
+            transition-delay: 0.5s;
+        }
+
+        &.element-animation:nth-of-type(2).element-show {
+            transition-delay: 1s;
+        }
+
+        &.element-animation:nth-of-type(3).element-show {
+            transition-delay: 1.5s;
+        }
+    }
+
+    &-bottom {
+        &.element-animation {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1.5s;
+
+            &.element-show {
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: 2s;
+            }
+        }
+    }
+
+    &-text {
+        position: absolute;
+
+        &__white {
+            color: $colorLight;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &__color {
+            color: $colorSite;
+            text-align: center;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+    }
+
+}
+
+.index-list__bottom {
+    margin-bottom: 96px;
+}
+
+.feature {
+    background-color: $colorBlock;
+    @include flex($horizontalPozition, $verticalPosition);
+
+    &-group {
+        @include flexCenterColumn (16px);
+        width: $widthThird;
+        padding: 104px 0;
+
+        &__img {
+            height: 35px;
+        }
+
+        &__title {
+            color: #FBFBFB;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &__text {
+            color: #FBFBFB;
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+    }
+}

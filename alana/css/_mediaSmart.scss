@@ -1,0 +1,281 @@
+@media (max-width: 767px) {
+    .container {
+        width: $widthSmart;
+    }
+
+    .center {
+        padding-left: calc(50% - $widthSmart / 2);
+        padding-right: calc(50% - $widthSmart / 2);
+    }
+
+    .search-form {
+        display: none;
+    }
+
+    .header-right__link {
+        visibility: hidden;
+        display: none;
+    }
+
+    .mobile-menu__link-site {
+        display: flex;
+    }
+
+    .main {
+        grid-template-columns: 0% 100%;
+
+        &-img {
+            visibility: hidden;
+            width: 0;
+        }
+
+        &-right {
+            padding: 148px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        &-heading {
+            font-size: 38px;
+        }
+
+        &-black,
+        &-color {
+            font-size: 20px;
+        }
+    }
+
+    .offer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 64px;
+
+        &-top {
+            flex-direction: column;
+            gap: 32px;
+            width: $widthFull;
+            margin-bottom: 32px;
+        }
+
+        &-group {
+            text-align: center;
+            align-items: center;
+        }
+
+        &-bottom {
+            width: $widthFull;
+
+            &-img {
+                height: 111px;
+            }
+        }
+    }
+
+    .catalog {
+
+        &-text {
+            margin-bottom: 65px;
+        }
+    }
+
+    .product-list__bottom {
+        margin-bottom: 64px;
+    }
+
+    .product {
+        margin-bottom: 41px;
+
+        &__card {
+            width: $widthFull;
+        }
+    }
+
+    .feature {
+        padding-bottom: 81px;
+
+        &-group {
+            width: $widthFull;
+        }
+    }
+
+    .subscribe {
+        padding-bottom: 110px;
+        gap: 59px;
+
+        &-left {
+            width: $widthFull;
+
+            &__dsc {
+                font-size: 18px;
+            }
+        }
+
+        &-right {
+            width: $widthFull;
+
+            &__text {
+                font-size: 14px;
+            }
+        }
+
+    }
+
+    .footer {
+        flex-direction: column;
+        padding-top: 43px;
+        padding-bottom: 9px;
+
+        &-left,
+        &-right {
+            width: $widthFull;
+            display: flex;
+            justify-content: center;
+        }
+
+        &-left {
+            order: 1
+        }
+
+        &-right {
+            order: 0;
+        }
+    }
+
+
+    /* product page */
+
+    .swiper-slide img {
+        max-height: 454px;
+    }
+
+    .productView {
+        margin-bottom: 64px;
+
+        &__dsc {
+            &-text {
+                width: 90%;
+            }
+        }
+
+        &__sort-box {
+            padding-top: 50px;
+            padding-bottom: 65px;
+        }
+    }
+
+
+    /* catalog page */
+
+    .breadcrumbs {
+        @include flexCenterColumn (32px);
+
+        &_padding {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        &-left {
+            &_padding {
+                padding-top: 24px;
+                padding-bottom: 0px;
+            }
+        }
+
+        &-right {
+            padding-bottom: 46px;
+        }
+    }
+
+    .filter {
+        width: $widthFull;
+        max-width: 20px;
+        position: absolute;
+
+        &-heading {
+            display: none;
+        }
+
+        &[open] {
+            max-width: 360px;
+        }
+    }
+
+    .sort {
+        &_position {
+            margin-left: 40px;
+        }
+    }
+
+
+    /* cart page */
+
+    .cart {
+        @include flexColumn (48px);
+        padding-bottom: 96px;
+
+        &-img {
+            width: 144px;
+            height: 188px;
+        }
+
+        .product {
+
+            &-heading {
+                font-size: 16px;
+            }
+
+            &-parameters {
+                gap: 4px;
+
+                &__name,
+                &__value {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &-content {
+            gap: 26px;
+            max-width: 50%;
+            margin-top: 14px;
+        }
+
+        .fa-times {
+            margin-top: 18px;
+            margin-right: 12px;
+            width: 10px;
+        }
+
+        &-button {
+            font-size: 12px;
+            padding: 9px 18px;
+        }
+    }
+
+    .cartForm {
+        @include flexColumn (48px);
+
+        &-address,
+        &-checkout {
+            width: 99%;
+        }
+    }
+
+
+
+    /* registration page */
+
+    .reg {
+        @include flexCenterColumn (40px);
+
+        &-right {
+            width: $widthFull;
+        }
+
+        .regForm {
+            width: $widthFull;
+        }
+    }
+
+}
